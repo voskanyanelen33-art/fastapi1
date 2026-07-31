@@ -13,7 +13,7 @@ app.add_middleware(
 
 class example(BaseModel):
   crim:float
-  zn:	float
+  zn:float
   indus:float
   nox:float	
   rm:float	
@@ -29,4 +29,4 @@ class example(BaseModel):
 def predict(data:example):
   house = pd.DataFrame([data.model_dump()])
   prediction = model.predict(house)
-  return {'estimated_price':prediction}
+  return {'estimated_price':float(prediction)}

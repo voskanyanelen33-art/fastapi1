@@ -1,5 +1,5 @@
 import joblib
-joblib.dump(pipeline,'pipeline1')
+
 model = joblib.load('pipeline1')
 from fastapi import FastAPI
 from pydantic import BaseModel
